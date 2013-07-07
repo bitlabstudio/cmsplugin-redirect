@@ -69,9 +69,6 @@ EXTERNAL_APPS = [
     'mptt',
     'sekizai',
     'cms.plugins.text',
-    'filer',
-    'easy_thumbnails',
-    'wand',
     'menus',
 ]
 
