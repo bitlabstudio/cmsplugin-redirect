@@ -69,6 +69,7 @@ EXTERNAL_APPS = [
     'mptt',
     'sekizai',
     'cms.plugins.text',
+    'cms.plugins.link',
     'menus',
 ]
 
@@ -101,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
+    'cmsplugin_redirect.middleware.ForceResponseMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

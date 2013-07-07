@@ -2,7 +2,7 @@
 from django.utils.timezone import now
 
 import factory
-from cms.models import Page, Site
+from cms.models import Page, Site, Title
 from django_libs.tests.factories import UserFactory
 
 from ..models import ForceRedirectPluginModel
@@ -28,6 +28,19 @@ class PageFactory(factory.Factory):
     publication_date = factory.LazyAttribute(lambda a: now())
     level = 1
     publisher_is_draft = True
+
+
+class TitleFactory(factory.Factory):
+    """Factory for the ``Title`` model."""
+    FACTORY_FOR = Title
+
+    language = 'en'
+    page = factory.SubFactory(PageFactory)
+    slug = factory.Sequence(lambda n: 'slug{}'.format(n))
+    title = factory.LazyAttribute(lambda obj: obj.slug)
+    menu_title = factory.LazyAttribute(lambda obj: obj.slug)
+    page_title = factory.LazyAttribute(lambda obj: obj.slug)
+    path = factory.LazyAttribute(lambda obj: obj.slug)
 
 
 class ForceRedirectPluginModelFactory(factory.Factory):
