@@ -1,8 +1,10 @@
 === ongoing ===
 
 
-- Added plugin, middleware, models and tests
 
+=== 0.2 ===
+
+- Added plugin, middleware, models and tests
 
 === 0.1 ===
 
