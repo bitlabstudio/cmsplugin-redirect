@@ -24,7 +24,7 @@ class ForceRedirectPlugin(CMSPluginBase):
         else:
             # otherwise try to redirect to the first child if present
             try:
-                url = '{}/'.format(
+                url = '/{}/'.format(
                     current_page.get_children()[0].get_path())
             except IndexError:
                 raise Exception('No child page found!')
