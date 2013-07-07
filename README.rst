@@ -3,9 +3,6 @@ CMSplugin redirect
 
 A reusable Django app to add custom redirect actions to Django-CMS.
 
-Note, that this is an early stage of development, so this is probably highly
-unstable and unfinished and also might not have a pypi relase, yet.
-
 
 Installation
 ------------
@@ -25,11 +22,28 @@ Add ``cmsplugin_redirect`` to your ``INSTALLED_APPS``::
         'cmsplugin_redirect',
     )
 
+Add the ``ForceResponseMiddleware`` to your middleware classes setting::
+
+    MIDDLEWARE_CLASSES = (
+        ...
+        'cmsplugin_redirect.middleware.ForceResponseMiddleware',
+    )
+
+
+Run ``./manage.py migrate`` to apply south migrations.
+
 
 Usage
 -----
 
-TODO: Describe usage
+You can add the ``Redirect action`` plugin to a placeholder like you would add
+all other plugins in the admin of a CMS Page.
+
+You can chose to which CMS Page you want to redirect via the drop down list.
+If you leave the ``page_link`` choice blank, the plugin redirects to the first
+child of the Page.
+
+Just be careful, that you don't accidentaly create infinite redirects loops.
 
 
 Contribute
