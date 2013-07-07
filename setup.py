@@ -30,7 +30,7 @@ setup(
     ],
     tests_require=[
         'fabric',
-        'factory_boy<=2.0.0',
+        'factory_boy<2.0.0',
         'django-nose',
         'coverage',
         'django-coverage',
