@@ -11,7 +11,7 @@ django-cms
 # Packages needed for running the tests. Needed by contributors.
 # ==============================================================
 Fabric
-factory_boy<=2.0.0
+factory_boy<2.0.0
 django-nose
 coverage
 django-coverage
