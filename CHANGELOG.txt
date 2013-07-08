@@ -1,6 +1,7 @@
 === ongoing ===
 
 
+=== 0.2.1 ===
 
 - fixed bug where you got "No exception supplied" when trying to edit the
   redirect action
