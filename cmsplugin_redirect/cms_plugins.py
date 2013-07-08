@@ -14,6 +14,7 @@ class ForceRedirectPlugin(CMSPluginBase):
     model = ForceRedirectPluginModel
     form = LinkForm
     name = _('Redirect action')
+    admin_preview = False
 
     def render(self, context, instance, placeholder):
         current_page = context['request'].current_page

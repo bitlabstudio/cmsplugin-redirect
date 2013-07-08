@@ -2,6 +2,9 @@
 
 
 
+- fixed bug where you got "No exception supplied" when trying to edit the
+  redirect action
+
 === 0.2 ===
 
 - Added plugin, middleware, models and tests
