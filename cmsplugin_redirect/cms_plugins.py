@@ -21,7 +21,7 @@ class ForceRedirectPlugin(CMSPluginBase):
         # if the user defined a page and that isn't the current one, redirect
         # there
         if instance.page_link and instance.page != instance.page_link:
-            url = instance.page_link.get_path()
+            url = instance.page_link.get_absolute_url()
         else:
             # otherwise try to redirect to the first child if present
             try:
